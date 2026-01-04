@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Friends</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Poppins,Arial;
+  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+  background-size:400% 400%;
+  animation:bgmove 10s infinite alternate;
+  color:white;
+}
+
+@keyframes bgmove{
+  0%{background-position:0% 0%}
+  100%{background-position:100% 100%}
+}
+
+h1{
+  text-align:center;
+  margin:25px 0;
+  font-size:32px;
+  text-shadow:0 10px 40px rgba(0,0,0,.7);
+}
+
+.wrapper{
+  display:flex;
+  flex-direction:column;
+  gap:35px;
+  padding:30px 40px;
+}
+
+.card{
+  display:flex;
+  gap:18px;
+  padding:18px;
+  border-radius:22px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.35);
+  backdrop-filter:blur(16px);
+  box-shadow:0 25px 80px rgba(0,0,0,.6);
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-6px) scale(1.01);
+}
+
+.photo{
+  width:170px;
+  height:200px;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 18px 50px rgba(0,0,0,.7);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.content h2{
+  margin:0 0 6px;
+  color:#ffdd55;
+}
+
+.tag{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:10px;
+  background:rgba(0,0,0,.45);
+  margin-bottom:8px;
+  font-size:12px;
+}
+
+.content p{
+  margin:5px 0;
+  line-height:1.55;
+}
+
+.hindi{
+  color:#fffd9e;
+  font-weight:600;
+}
+
+.heading{
+  color:#7de0ff;
+  font-weight:600;
+  margin-top:6px;
+}
+
+/* Conclusion box */
+.conclusion{
+  margin:25px 40px;
+  padding:18px;
+  border-radius:20px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.35);
+  backdrop-filter:blur(16px);
+  box-shadow:0 20px 70px rgba(0,0,0,.6);
+}
+
+/* Poetry */
+.poetry{
+  text-align:center;
+  margin:25px 0 10px;
+  font-style:italic;
+  font-size:15px;
+  color:#cfe8ff;
+}
+
+/* Thank you */
+.thanks{
+  text-align:center;
+  margin-top:8px;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>My Special Friends</h1>
+
+
+<div class="wrapper">
+
+  <!-- ========== ARUSHI (FEMALE FRIEND) ========== -->
+  <div class="card">
+
+    <div class="photo">
+      <img src="arushi.jpg">
+    </div>
+
+    <div class="content">
+
+      <h2>Arushi</h2>
+      <span class="tag">Female Best Friend</span>
+
+      <p class="heading">1. Identity</p>
+      <p>Arushi is a Nepali Christian girl and my only online female best friend.</p>
+
+      <p class="heading">2. Place</p>
+      <p>She belongs to Assam guwahati</p>
+
+      <p class="heading">3. Nature</p>
+      <p>She is mastikhor, chulbuli and she's only one my female freind no girl can replace her</p>
+
+      <p class="heading">4. Personality</p>
+      <p>She is honest, bold, straightforward and full of attitude in a positive way.</p>
+
+      <p class="heading">5. Special Line</p>
+      <p class="hindi">ise gali khane ka bahut shauk hai</p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ========== SAMEER (MALE FRIEND) ========== -->
+  <div class="card">
+
+    <div class="photo">
+      <img src="sameer.jpg">
+    </div>
+
+    <div class="content">
+
+      <h2>Sameer</h2>
+      <span class="tag">Childhood Friend</span>
+
+      <p>Sameer is a Muslim and my friend since the very first day of my school life.</p>
+
+      <p>We both sat on the same bench on the first day of our KG class and our friendship started from there — and it is still going on till today.</p>
+
+      <p>Earlier he used to live in the village next to mine, but now he lives in Delhi.</p>
+
+      <p>He has always been a loyal, understanding and trustworthy friend of mine.</p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ========== ROHIT CHAVHAN (BEST FRIEND) ========== -->
+  <div class="card">
+
+    <div class="photo">
+      <img src="rohit.jpg">
+    </div>
+
+    <div class="content">
+
+      <h2>Rohit Chavhan (Son of Kalu Chavhan)</h2>
+      <span class="tag">My Closest & Most Special Friend</span>
+
+      <p>Rohit is Marathi and he is the one who never lets me feel alone in life.</p>
+
+      <p>I consider him my real elder brother — not by blood, but by heart.</p>
+
+      <p>No one can ever take his place because he is the most special and priceless friend of mine.</p>
+
+      <p>I have felt the happiest moments of my life with him — we spent countless nights together in GC chats and playing BGMI.</p>
+
+      <p>He is 1–2 years older than me, but still the most genuine person in my life.</p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- ========== CONCLUSION ========== -->
+<div class="conclusion">
+
+  <p>
+    Right now there are some reasons due to which things are not the same as before…  
+    friendships have not ended — but the bond and connection is not like it used to be earlier.
+  </p>
+
+</div>
+
+
+<!-- ========== ENGLISH FRIENDSHIP POETRY ========== -->
+<p class="poetry">
+  “Some friends are not just people —<br>
+  they are memories, moments, emotions and a whole lifetime in disguise.”
+</p>
+
+<p class="thanks">Thank you for everything — to all three of you 🤍</p>
+
+
+</body>
+</html>

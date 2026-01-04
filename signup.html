@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Age Verification | Vishal</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Poppins,Arial;
+  background:linear-gradient(135deg,#1f1c2c,#928DAB,#ff7a00);
+  background-size:400% 400%;
+  animation:bgmove 8s infinite alternate;
+}
+
+@keyframes bgmove{
+  0%{background-position:0% 0%;}
+  100%{background-position:100% 100%;}
+}
+
+/* Center Layout */
+.container{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  color:white;
+}
+
+/* Main Button */
+button{
+  padding:14px 26px;
+  border-radius:14px;
+  border:none;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#ffdd00,#ff6a00);
+  color:#000;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:.3s;
+}
+button:hover{
+  transform:scale(1.08);
+  box-shadow:0 16px 40px rgba(0,0,0,.6);
+}
+
+/* Popup Form */
+.popup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(.6);
+  width:400px;
+  padding:26px;
+  border-radius:22px;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.4);
+  box-shadow:0 25px 80px rgba(0,0,0,.6);
+  opacity:0;
+  pointer-events:none;
+  transition:.35s;
+}
+
+.popup.active{
+  opacity:1;
+  transform:translate(-50%,-50%) scale(1);
+  pointer-events:auto;
+}
+
+/* Title */
+.popup h2{
+  margin:0 0 10px;
+  color:#fff;
+  text-align:center;
+  letter-spacing:1px;
+}
+
+/* Inputs */
+input{
+  width:100%;
+  padding:12px 14px;
+  margin:10px 0;
+  border-radius:12px;
+  border:none;
+  outline:none;
+  font-size:15px;
+  background:rgba(255,255,255,.9);
+}
+
+/* Verify Button */
+.verify-btn{
+  width:100%;
+  padding:12px;
+  margin-top:6px;
+  border-radius:12px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  background:linear-gradient(135deg,#00ffcc,#0099ff);
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+.verify-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* Result */
+.result{
+  margin-top:12px;
+  padding:10px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:600;
+  display:none;
+}
+
+.success{
+  background:#00ffb3;
+  color:#000;
+  animation:pulse 1.2s infinite;
+}
+
+.fail{
+  background:#ff4b4b;
+  color:#fff;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+
+.close{
+  text-align:center;
+  margin-top:6px;
+  color:#eee;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1 style="text-shadow:0 5px 20px rgba(0,0,0,.6);">
+    Click The Button To Continue
+  </h1>
+
+  <button onclick="openForm()">
+    Click Here For More Information
+  </button>
+
+</div>
+
+
+<!-- POPUP -->
+<div class="popup" id="ageForm">
+
+  <h2>Age Verification</h2>
+
+  <input type="text" id="name" placeholder="Enter Your Name">
+
+  <input type="number" id="age" placeholder="Enter Your Age">
+
+  <button class="verify-btn" onclick="verify()">
+    Verify & Continue
+  </button>
+
+  <div id="resultBox" class="result"></div>
+
+  <div class="close" onclick="closeForm()">Close</div>
+
+</div>
+
+
+<script>
+
+function openForm(){
+  document.getElementById("ageForm").classList.add("active");
+}
+
+function closeForm(){
+  document.getElementById("ageForm").classList.remove("active");
+  document.getElementById("resultBox").style.display="none";
+}
+
+function verify(){
+
+  let name = document.getElementById("name").value.trim();
+  let age  = parseInt(document.getElementById("age").value);
+  let box  = document.getElementById("resultBox");
+
+  if(name=="" || isNaN(age)){
+    box.innerHTML="Please enter valid details";
+    box.className="result fail";
+    box.style.display="block";
+    return;
+  }
+
+  /* 18+ condition → homepage.html open */
+  if(age >= 18){
+
+    box.innerHTML = "Access Granted — Welcome " + name + " 🎉";
+    box.className="result success";
+    box.style.display="block";
+
+    setTimeout(()=>{
+      window.location.href = "page2.html";
+    },1200);
+  }
+
+  else{
+    box.innerHTML = "Sorry " + name + ", You must be 18+ to continue ❌";
+    box.className="result fail";
+    box.style.display="block";
+  }
+
+}
+
+</script>
+
+</body>
+</html>

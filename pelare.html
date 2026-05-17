@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Only Kammo 💖</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    background:
+    linear-gradient(to bottom,#12001c,#2a0048,#07000d);
+    color:white;
+    position:relative;
+    padding:40px 20px;
+}
+
+/* STARS */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity:0.3;
+    z-index:0;
+    animation:stars 80s linear infinite;
+}
+
+@keyframes stars{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-1000px);
+    }
+
+}
+
+/* FLOATING HEARTS */
+
+.heart{
+    position:fixed;
+    top:-50px;
+    font-size:24px;
+    animation:fall 12s linear infinite;
+    z-index:1;
+    opacity:0.8;
+}
+
+@keyframes fall{
+
+    from{
+        transform:
+        translateY(-100px)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translateY(120vh)
+        rotate(360deg);
+    }
+
+}
+
+.container{
+    position:relative;
+    z-index:5;
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+/* HEADING */
+
+h1{
+
+    font-size:58px;
+
+    margin-top:20px;
+
+    background:
+    linear-gradient(to right,#ff9ce9,#ffffff,#ffbdf8);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+    from{
+        filter:drop-shadow(0 0 5px #ff7fe7);
+    }
+
+    to{
+        filter:drop-shadow(0 0 20px #ffb2f7);
+    }
+
+}
+
+/* MAIN BOX */
+
+.box{
+
+    margin-top:45px;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 25px rgba(255,120,230,0.35);
+
+    animation:fade 2s ease forwards;
+
+    opacity:0;
+
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* TEXT */
+
+p{
+
+    font-size:24px;
+
+    line-height:2;
+
+    color:#ffe9ff;
+
+    margin-top:20px;
+
+}
+
+/* SPECIAL LINE */
+
+.special{
+
+    margin-top:35px;
+
+    font-size:28px;
+
+    color:#ffd0f8;
+
+    font-weight:bold;
+
+}
+
+/* BLANK SPACE */
+
+.blank{
+
+    margin-top:50px;
+
+    height:180px;
+
+    border-radius:25px;
+
+    border:2px dashed rgba(255,255,255,0.4);
+
+    background:rgba(255,255,255,0.03);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    color:#ffc9f6;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEARTS -->
+
+<div class="heart" style="left:5%; animation-delay:0s;">💖</div>
+<div class="heart" style="left:15%; animation-delay:2s;">💕</div>
+<div class="heart" style="left:28%; animation-delay:4s;">✨</div>
+<div class="heart" style="left:45%; animation-delay:1s;">💘</div>
+<div class="heart" style="left:60%; animation-delay:3s;">🌸</div>
+<div class="heart" style="left:75%; animation-delay:5s;">💞</div>
+<div class="heart" style="left:88%; animation-delay:2s;">🥺</div>
+
+<div class="container">
+
+    <h1>
+
+        Only You, Kammo 💖✨
+
+    </h1>
+
+    <div class="box">
+
+        <p>
+
+            Kammo jaan... honestly I don’t even know
+            how to explain what you mean to me. 🥺💖
+
+            <br><br>
+
+            There are billions of people in this world...
+            but for my heart,
+            only <b>you</b> exist. ✨
+
+            <br><br>
+
+            Mere dil me tumhare alawa
+            kisi aur ladki ke liye
+            koi jagah hi nahi hai. 💕
+
+            <br><br>
+
+            Jo bhi feelings hain...
+            jo bhi pyaar hai...
+            jo bhi sukoon hai...
+            sab tum ho, Kammo jaan. 😭💘
+
+            <br><br>
+
+            Sometimes I look at you
+            and quietly smile,
+            because it feels unreal
+            that someone so beautiful exists. 🌸✨
+
+            <br><br>
+
+            Tum sirf ek girl nahi ho mere liye...
+            tum meri happiness ho,
+            meri peace ho,
+            meri favorite feeling ho. 💖
+
+            <br><br>
+
+            Aur sach kahu...
+            agar tum mere saath ho,
+            to mujhe aur kuch nahi chahiye life me. 🥺💞
+
+        </p>
+
+        <div class="special">
+
+            I Love You More Than Words Can Ever Explain... 💘✨
+
+        </div>
+
+        <!-- BLANK SPACE -->
+
+        <div class="blank">
+
+            bas bas bas ab mere pelare lele 🥰
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
